@@ -1,6 +1,6 @@
 :root {
     --pagebg: #FFF;
-    --main: #102581;
+    --main: rgb(66, 13, 13);
     --bglink: rgba(0, 0, 0, 0.3);
     --darkbg: #FFF;
     --lightbg: #000;
@@ -84,7 +84,9 @@ h2 {
 }
 
 .no-list {
+    margin-left: 14%;
     margin-bottom: 50px;
+    position: absolute;
 }
 .list {
     display: grid;
@@ -111,14 +113,6 @@ h2 {
     font-size: 13px;
     color: var(--lighter);
     margin-bottom: 3px;
-}
-
-footer {
-    border-top: 1px solid var(--lighter);
-    padding: 20px 0 !important;
-    text-align: center;
-    font-size: 16px;
-    color: var(--main);
 }
 
 @media (max-width: 900px) {

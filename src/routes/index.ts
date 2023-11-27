@@ -1,23 +1,12 @@
-import { Router } from "express";
+import { Router } from 'express';
+import * as pageController from '../controllers/pageController'
+import * as searchController from '../controllers/searchController'
 
 const router = Router();
 
-router.get('/', (req, res) => {
-    res.send('home')
-})
-router.get('/cortes-curtos', (req, res) => {
-    res.send('LISTA DE CORTES CURTOS')
-})
-router.get('/cortes-medios', (req, res) => {
-    res.send('LISTA DE CORTES MEDIOS')
-})
-router.get('/cortes-longos', (req, res) => {
-    res.send('LISTA DE CORTES LONGOS')
-})
-router.get('/search', (req, res) => {
-    res.send('PESQUISA')
-})
-
-
+router.get('/', pageController.home)
+router.get('/cortes-curtos', pageController.cortesCurtos)
+router.get('/cortes-medios', pageController.cortesMedios)
+router.get('/search', searchController.search)
 
 export default router;
