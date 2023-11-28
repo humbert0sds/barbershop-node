@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { createMenuObject } from '../helpers/createMenuObject';
-import { cortes } from '../models/pet'
+import { pet } from '../models/pet'
 
 export const home = (req: Request, res: Response) => {
-    let list = cortes.getAll();
+    let list = pet.getAll();
 
     res.render('pages/page', {
         menu: createMenuObject('all'),
@@ -15,7 +15,7 @@ export const home = (req: Request, res: Response) => {
     })
 }
 export const cortesCurtos = (req: Request, res: Response) => {
-    let list = cortes.getFromType('cortesCurtos');
+    let list = pet.getFromType('cortesCurtos');
 
     res.render('pages/page', {
         menu: createMenuObject('cortesCurtos'),
@@ -27,7 +27,7 @@ export const cortesCurtos = (req: Request, res: Response) => {
     })
 }
 export const cortesMedios = (req: Request, res: Response) => {
-    let list = cortes.getFromType('cortesMedios');
+    let list = pet.getFromType('cortesMedios');
 
     res.render('pages/page', {
         menu: createMenuObject('cortesMedios'),
